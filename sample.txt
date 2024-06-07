@@ -1,0 +1,91 @@
+create todo 
+
+http://localhost:4000/todos   [POST]
+
+INPUT 
+{
+  "title": "Finish homework",
+  "date": "2024-06-01"
+}
+
+OUTPUT
+{
+    "id": 1,
+    "title": "Finish homework",
+    "completed": false,
+    "date": "2024-06-01"
+}
+
+==============================================================================
+==============================================================================
+
+
+get all todos
+
+http://localhost:4000/todos [GET]
+
+OUTPUT
+[
+    {
+        "id": 1,
+        "title": "Finish homework",
+        "completed": false,
+        "date": "2024-06-01"
+    },
+    {
+        "id": 2,
+        "title": "Finish JS",
+        "completed": false,
+        "date": "2024-06-01"
+    }
+]
+
+
+==============================================================================
+==============================================================================
+
+GET TODO BY id
+
+http://localhost:4000/todos/1  [GET]
+
+
+OUTPUT
+
+{
+    "id": 1,
+    "title": "Finish homework",
+    "completed": false,
+    "date": "2024-06-01"
+}
+
+
+==============================================================================
+==============================================================================
+
+UPDATE TODO BY ID 
+
+http://localhost:4000/todos/2  [PUT]
+
+input 
+
+{
+  "title": "Jave to Finish LS",
+  "date": "2024-06-01"
+}
+
+OUTPUT
+
+{
+    "id": 2,
+    "title": "Jave to Finish LS",
+    "completed": false,
+    "date": "2024-06-01"
+}
+
+
+==============================================================================
+==============================================================================
+
+DELETE TODO BY ID 
+
+http://localhost:4000/todos/2  [DELETE]

@@ -1,0 +1,5 @@
+cd todo-api
+
+npm install express body-parser
+
+node index.js
